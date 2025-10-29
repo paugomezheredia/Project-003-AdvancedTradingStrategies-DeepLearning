@@ -22,6 +22,8 @@ def main():
     df = add_technical_features(df)
     df = normalize_features(df)
 
+    print("Class distribution:", df['signal'].value_counts(normalize=True))
+
     # 2. Split data
     train_df, val_df, test_df = split_data(df)
 
